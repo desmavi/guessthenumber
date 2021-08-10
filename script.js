@@ -70,9 +70,9 @@ function updateN() {
 }
 
 //Read Number Value while Updating for Screen Reader
-function updateAriaLabel() {
-    numberValue.setAttribute("aria-label", n)
-}
+//function updateAriaLabel() {
+    //numberValue.setAttribute("aria-label", n)
+//}
 
 buttonStart.addEventListener("click", 
     function(){
@@ -91,7 +91,7 @@ buttonStart.addEventListener("click",
         numberValue.classList.add("number","m-0");
         numberValue.style.lineHeight = 3;      
         numberValue.setAttribute("aria-live", "assertive")
-        updateAriaLabel();
+        //updateAriaLabel();
     })
 
 buttonCorrect.addEventListener("click", function() {
@@ -112,7 +112,7 @@ buttonLow.addEventListener("click", function() {
     min = n;
     updateN();  
     removeButtons();
-    updateAriaLabel();
+    //updateAriaLabel();
 })
 
 buttonHigh.addEventListener("click", function() {
@@ -120,7 +120,7 @@ buttonHigh.addEventListener("click", function() {
     max = n;
     updateN();
     removeButtons;
-    updateAriaLabel();
+    //updateAriaLabel();
 })
 
 buttonRestart.addEventListener("click",
