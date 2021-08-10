@@ -1,0 +1,150 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+$font-family-sans-serif:'Overpass Mono', monospace;
+
+//colors
+$dark :#011928;
+$light: #ffffff;
+$red:#EB5757;
+$green: #6FCF97;
+$cyan:#56CCF2;
+$yellow:#F2C94C;
+$orange:#F2994A;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Then add additional custom code here
+
+//CUSTOM BUTTONS
+.button {
+    min-width: 150px;
+    border: 1px solid $dark;
+    padding: 0.8rem 2rem;
+    display: block;
+    position: relative;
+    font-weight: bold;
+    color: $dark;
+    transition: all ease-in-out 0.5s;
+    top:0;
+    left:0;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 100%;
+        height: 100%;
+        background-color: $dark;
+        z-index: -1;
+        transition: all ease-in-out 0.5s;
+    }
+
+    &:disabled {
+        color: $gray-800;
+        border: 1px solid $gray-800;
+        top:6;
+        left:6;
+
+        &::after {
+            background-color: $gray-800;
+            display: none;
+            }
+    }
+}
+
+.button-start {
+    background-color: $yellow;
+    transition: all ease-out 0.2s;
+
+    &:active{
+    background-color: $yellow-600;
+    }
+}
+
+.button-error {
+    background-color: $red;
+    transition: background-color ease-out 0.2s;
+    display: none;
+
+    &:active{
+    background-color: $red-600;
+    }
+
+    &:disabled {
+        background-color:$red-300;
+    }
+}
+
+.button-success {
+    background-color: $green;
+    transition: background-color ease-out 0.2s;
+    display: none;
+
+    &:active{
+    background-color: $green-600;
+    }
+}
+
+.button-restart {
+    background-color: $cyan;
+    transition: background-color ease-out 0.2s;
+
+    &:active{
+    background-color: $cyan-600;
+    }
+}
+
+@media (hover: hover) {
+    .button:hover {
+        top:6px;
+        left:6px;
+
+        &::after {
+            top:0;
+            left:0;
+        }
+    }
+}
+
+//Number Guessed
+.number {
+    font-size: 5rem;
+    border: none;
+    background-color: transparent;
+    text-transform: uppercase;
+    text-decoration-thickness: 2px;
+    text-underline-offset:0.5rem;
+}
+
+.illustration-div {
+    width: 260px;
+    height:260px;
+}
+
+.img-restart {
+    display: none;
+}
+
+.credit p {
+    font-size: 10px;
+}
+
+@media (max-width:767px) {
+    .guess {
+        flex-direction: column;
+    }
+
+    .illustration-div {
+        width: 100%;
+        height: auto;
+    }
+
+    .img-start,
+    .img-restart {
+        width:50%;
+    }
+}
