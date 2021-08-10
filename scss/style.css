@@ -12036,6 +12036,7 @@ fieldset:disabled .btn {
   background-color: #45a3c2;
 }
 
+
 @media (hover: hover) {
   .button:hover {
     top: 6px;
@@ -12044,6 +12045,10 @@ fieldset:disabled .btn {
   .button:hover::after {
     top: 0;
     left: 0;
+  }
+  button[disabled]:hover {
+  top: 0;
+  left: 0;    
   }
 }
 
