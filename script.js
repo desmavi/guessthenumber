@@ -53,13 +53,13 @@ function removeButtons() {
 
 function disableButtonHigh() {
     if(n == max){
-        buttonHigh.setAttribute('disabled', '');        
+        buttonLow.setAttribute('disabled', '');        
     }
 }
 
 function disableButtonLow() {
     if(n == min){
-        buttonLow.setAttribute('disabled', '');        
+        buttonHigh.setAttribute('disabled', '');        
     }
 }
 
