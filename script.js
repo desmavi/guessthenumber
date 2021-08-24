@@ -51,7 +51,7 @@ function removeButtons() {
     }
 }
 
-function disableButtonHigh() {
+function disableButtonLow() {
     if(n == max){
         buttonLow.setAttribute('disabled', '');        
     } else {
@@ -59,7 +59,7 @@ function disableButtonHigh() {
     }
 }
 
-function disableButtonLow() {
+function disableButtonHigh() {
     if(n == min){
         buttonHigh.setAttribute('disabled', '');        
     }
@@ -78,11 +78,9 @@ function updateN() {
         removeButtons();
         }
         changeContentAndPush();  
-        console.log("sono in while")
     }
     else {
         changeContentAndPush();
-        console.log("sono in else")
     }
 }
 
@@ -123,18 +121,18 @@ buttonLow.addEventListener("click", function() {
     //set a new min range
     min = n;
     updateN();  
-    removeButtons();
     disableButtonHigh();
     disableButtonLow();
+    removeButtons();
 })
 
 buttonHigh.addEventListener("click", function() {
     //set a new max range
     max = n;
     updateN();
-    removeButtons;
     disableButtonHigh();
     disableButtonLow();
+    removeButtons();
 })
 
 buttonRestart.addEventListener("click",
