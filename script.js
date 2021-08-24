@@ -52,13 +52,13 @@ function removeButtons() {
 }
 
 function disableButtonHigh() {
-    if(n == max){
+    if(n == max || n == 0){
         buttonLow.setAttribute('disabled', '');        
     }
 }
 
 function disableButtonLow() {
-    if(n == min){
+    if(n == min || n == 100){
         buttonHigh.setAttribute('disabled', '');        
     }
 }
